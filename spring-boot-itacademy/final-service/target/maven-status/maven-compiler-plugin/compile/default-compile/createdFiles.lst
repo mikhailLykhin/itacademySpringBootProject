@@ -1,0 +1,4 @@
+com\itacademy\example\service\services\BookService.class
+com\itacademy\example\service\services\PetService.class
+com\itacademy\example\service\services\UserService.class
+com\itacademy\example\service\utils\LogoFileUploader.class

@@ -1,0 +1,5 @@
+com\itacademy\example\rest\controllers\BookController.class
+com\itacademy\example\rest\controllers\UserController.class
+com\itacademy\example\rest\configurations\WebSecurityConfig.class
+com\itacademy\example\rest\controllers\PetController.class
+com\itacademy\example\rest\utils\CustomAccessDeniedHandler.class

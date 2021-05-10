@@ -1,0 +1,4 @@
+com\itacademy\example\dao\UserDao.class
+com\itacademy\example\dao\PetDao.class
+com\itacademy\example\dao\AGenericDao.class
+com\itacademy\example\dao\BookDao.class

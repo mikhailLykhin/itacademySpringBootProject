@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>New person</title>
+    <link href="styles/styles.css" rel="stylesheet" />
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} "/>
+</head>
+<body>
+<div class="mx-auto" style="width: 500px; margin-top: 300px">
+    <form th:method="POST" th:action="@{/book/new}" th:object="${book}" enctype="multipart/form-data">
+
+        <input type="text" th:field="*{isbn}" id="isbn"
+               class="form-control" placeholder="Enter isbn"/>
+        <div style="color:red" th:text="${bookError}"></div>
+        <br/>
+        <input type="submit" value="CREATE" class="btn btn-primary"/>
+    </form>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Users page</title>
+    <link href="styles/styles.css" rel="stylesheet"/>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css} "/>
+</head>
+<body>
+<form>
+    <fieldset>
+        <legend>Well we see all users</legend>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th> Name</th>
+                <th> Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="user : *{users}">
+                <td >
+                    <a th:href="@{users/{id}(id=${user.getId()})}" th:text="${user.getUsername()}"></a>
+                    <a class="btn btn-primary" th:href="@{/users/byname(name = ${user.getUsername()})}" role="button" style="width: 200px">Link by name</a>
+                </td>
+                <td th:text="${user.getSalary()}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </fieldset>
+</form>
+<a class="btn btn-primary" href="/users/new" role="button">Create new user</a>
+</body>
+</html>
